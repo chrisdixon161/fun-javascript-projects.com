@@ -1,3 +1,20 @@
-# fun-javascript-projects.com
+# fun-javascript-projects
 
-## A series of fun & free practice projects to discover how HTML, CSS & Javascript all fit together.
+## Build Setup
+
+```bash
+# install dependencies
+$ yarn install
+
+# serve with hot reload at localhost:3000
+$ yarn dev
+
+# build for production and launch server
+$ yarn build
+$ yarn start
+
+# generate static project
+$ yarn generate
+```
+
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Number Match Game</title>
+  </head>
+
+  <body>
+    <main id="game-area">
+      <div class="stats">
+        <h3 id="score">
+          Score: <span id="currentScore"></span> /
+          <span id="totalAvailable"></span>
+        </h3>
+
+        <p class="items">
+          <span id="number">7</span> <span id="item-name">20</span>
+        </p>
+        <div class="match-buttons">
+          <button>&#10003;</button>
+          <button>&#10007;</button>
+        </div>
+      </div>
+      <div class="imageArea">
+        <h3 id="message"></h3>
+        <div id="startScreen">
+          <h1>Welcome to the <em>Number Match</em> game...</h1>
+          <em class="space-y">The rules are simple. </em>
+          <p class="space-y">
+            &#9654; Hit thumbs up if the number of items on the image matches
+            the displayed number.
+          </p>
+          <p class="space-y">&#9654; Thumbs down if no match!</p>
+          <p class="space-y">
+            You have <span id="timeSetting"></span> seconds to decide.
+          </p>
+        </div>
+        <button id="play-button">
+          Play!
+        </button>
+        <div id="imageContainer">
+          <!-- placeholder -->
+          <img src="images/macaroons.jpg" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
