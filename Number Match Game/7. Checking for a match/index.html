@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Number Match Game</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <main id="game-area">
       <div class="stats">
-        <h3>
-          Score: <span id="currentScore">7</span> /
-          <span id="totalAvailable">20</span>
-        </h3>
+        <div id="statsContent">
+          <h3>
+            Score: <span id="currentScore">7</span> /
+            <span id="totalAvailable">20</span>
+          </h3>
 
-        <p class="items">
-          <span id="number"></span> <span id="item-name"></span>
-        </p>
-        <div class="match-buttons">
-          <button>&#10003;</button>
-          <button>&#10007;</button>
+          <p class="items">
+            <span id="number"></span> <span id="item-name"></span>
+          </p>
+          <div class="match-buttons">
+            <button onclick="match()">&#10003;</button>
+            <button onclick="noMatch()">&#10007;</button>
+          </div>
         </div>
       </div>
       <div class="imageArea">
@@ -37,14 +40,12 @@
             You have <span id="timeSetting"></span> seconds to decide.
           </p>
         </div>
-        <button id="play-button">
+        <button id="play-button" onclick="play()">
           Play!
         </button>
-        <div id="imageContainer">
-          <!-- placeholder -->
-          <img src="images/macaroons.jpg" alt="" />
-        </div>
+        <div id="imageContainer"></div>
       </div>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>

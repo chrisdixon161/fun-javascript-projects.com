@@ -1,0 +1,111 @@
+html {
+  font-size: 10px;
+  color: #212560;
+}
+
+#game-area {
+  font-size: 1.6rem;
+  padding-top: 3rem;
+  font-weight: 300;
+}
+
+.imageArea,
+.stats {
+  min-height: 30vh;
+}
+
+.imageArea {
+  background: linear-gradient(70deg, #859ede, #6965de);
+  border-radius: 0 0 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.4rem;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.items {
+  font-size: 2rem;
+}
+
+button {
+  width: 8rem;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  border: 2px solid #a1e0e4;
+  background: transparent;
+  cursor: pointer;
+}
+
+button:nth-child(2) {
+  border: 2px solid rgb(241, 152, 152);
+}
+
+.stats {
+  background: whitesmoke;
+  border: 2px solid #859ede;
+  border-radius: 3rem 3rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.space-y {
+  margin: 3rem 0;
+}
+
+img {
+  width: 100%;
+  border-radius: 3rem;
+}
+
+.fade {
+  animation-duration: 1s;
+  animation-name: fade;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media all and (min-width: 600px) {
+  #game-area {
+    display: flex;
+  }
+
+  .imageArea,
+  .stats {
+    min-height: 50vh;
+  }
+
+  .imageArea {
+    flex: 2;
+    border-radius: 3rem;
+    transform: translate(-3rem);
+  }
+
+  .stats {
+    flex: 1;
+    border-radius: 3rem 0 0 3rem;
+    margin-left: 3rem;
+    padding-right: 3rem;
+  }
+}
