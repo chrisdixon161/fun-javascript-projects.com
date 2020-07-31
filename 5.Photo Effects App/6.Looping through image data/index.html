@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Photo Effects App</title>
+
+    <style>
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        background: rgb(48, 47, 47);
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 3;
+      }
+
+      aside {
+        flex: 1;
+        margin-left: 0.5rem;
+      }
+
+      button {
+        background: rgb(21, 20, 20);
+        text-align: left;
+        padding: 1.6rem 0 1.6rem 2rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+        color: rgb(212, 210, 210);
+        border: none;
+        border-bottom: 1px solid;
+      }
+
+      button:hover {
+        background: rgb(50, 47, 47);
+      }
+
+      label {
+        font-size: 1.8rem;
+        padding-right: 1.6rem;
+      }
+
+      .input-wrapper {
+        background: gray;
+        padding: 1.6rem;
+      }
+
+      .effects {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .controls {
+        display: flex;
+      }
+
+      .controls > button {
+        flex: 1;
+        border-bottom: none;
+        text-align: center;
+      }
+
+      canvas {
+        width: 100%;
+      }
+
+      @media (min-width: 1000px) {
+        body {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas id="canvas"></canvas>
+    </main>
+    <aside class="sidebar">
+      <div class="input-wrapper">
+        <label for="uploader">Select file:</label>
+        <input type="file" id="uploader" />
+      </div>
+      <div class="effects">
+        <button>Greyscale</button>
+        <button>Sepia effect</button>
+        <button>Invert</button>
+        <button>RGB - RBG</button>
+        <button>RGB - BGR</button>
+        <button>RGB - GBR</button>
+        <button>RGB - GRB</button>
+      </div>
+      <div class="controls">
+        <button>Clear</button>
+        <button>Download</button>
+      </div>
+    </aside>
+    <script src="script.js"></script>
+  </body>
+</html>
