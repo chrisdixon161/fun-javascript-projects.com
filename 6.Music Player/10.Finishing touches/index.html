@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="player">
+      <img src="headphones.svg" class="headphones" id="headphones" />
+
+      <audio id="player" ontimeupdate="updateProgress()">
+        <source id="source" />
+        Audio not supported
+      </audio>
+
+      <progress id="progress" value="0" max="100"></progress>
+      <div id="controls">
+        <p id="currentSong"></p>
+        <div class="controls_wrapper">
+          <span onclick="playAudio()">&#9658;</span>
+          <span onclick="pauseAudio()">&#10074;&#10074;</span>
+        </div>
+        <p>Volume:</p>
+        <div class="volume">
+          <span>- </span>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.01" />
+          <span> +</span>
+        </div>
+      </div>
+
+      <h2>My Songs:</h2>
+      <div id="songList"></div>
+      <p>
+        Music: <a href="https://www.bensound.com">https://www.bensound.com</a>
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
