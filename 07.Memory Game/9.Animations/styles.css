@@ -1,0 +1,85 @@
+body {
+	font-family: "Gill Sans", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(
+		90deg,
+		rgb(20, 15, 119) 0%,
+		rgb(118, 248, 230) 50%,
+		rgb(70, 219, 249) 100%
+	);
+	color: rgb(20, 73, 63);
+	letter-spacing: 2px;
+}
+
+#score {
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 1rem 0;
+}
+
+button {
+	font-family: "Gill Sans", sans-serif;
+	border-radius: 5px;
+	border: none;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+ul {
+	display: grid;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: repeat(4, 100px);
+	gap: 10px;
+	padding: 0; /* remove default */
+}
+
+li {
+	list-style: none;
+	border-radius: 10px;
+	border: 0.5px solid rgba(2, 0, 36, 1);
+	cursor: pointer;
+}
+
+/* 1. add everything below */
+.shake {
+	animation: shake 0.1s;
+}
+
+.pop {
+	animation: pop 0.5s;
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-3deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes pop {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.06);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* over to js file§ */
